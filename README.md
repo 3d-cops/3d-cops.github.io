@@ -1,11 +1,11 @@
 # 3D Part Segmentation via Geometric Aggregation of 2D Visual Features
 
-This is the repository that contains source code for the [COPS website](https://cops.github.io).
+This is the repository that contains source code for the [COPS website](https://3d-cops.github.io).
 
 If you find COPS useful for your work please cite:
 ```
 @article{garosi2025cops,
-  author    = {Garosi, Marco and Tedoldi, Riccardo and Boscaini, Davide and Mancini, Massimiliano and Poiesi, Fabio and Sebe, Nicu},
+  author    = {Garosi, Marco and Tedoldi, Riccardo and Boscaini, Davide and Mancini, Massimiliano and Sebe, Nicu and Poiesi, Fabio},
   title     = {3D Part Segmentation via Geometric Aggregation of 2D Visual Features},
   journal   = {WACV},
   year      = {2025},
