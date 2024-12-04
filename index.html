@@ -51,7 +51,7 @@
               <a href="https://scholar.google.at/citations?user=bqTPA8kAAAAJ">Massimiliano Mancini</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://scholar.google.it/citations?user=stFCYOAAAAAJ">Nicu Sebe</a><sup>1,2</sup>,
+              <a href="https://scholar.google.it/citations?user=stFCYOAAAAAJ">Nicu Sebe</a><sup>1</sup>,
             </span>
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=BQ7li6AAAAAJ">Fabio Poiesi</a><sup>2</sup>
@@ -111,7 +111,6 @@
         <div class="content has-text-justified">          
           <img src="./static/images/teaser.png" alt="COPS teaser"/>
           <p>
-            
             The quality of the parts' description heavily influences the part segmentation performance of methods based on vision-language models.
             For instance, the performance of PointCLIPv2 (left), deteriorates rapidly when replacing the default textual prompt with <i>e.g.</i>, a GPT-generated description, the template "This is a depth image of an airplane's (part)", or simply using part names.
             In contrast, our pipeline (center) produces more accurate segmentations by disentangling part decomposition from part classification.
@@ -131,19 +130,17 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">          
+        <div class="content has-text-justified">
           <p>
-            Supervised 3D part segmentation models are tailored to a predetermined closed set of objects and parts. This restriction limits their transferability to open-set, real-world scenarios.
-            Recent works explored vision-language models (VLMs) as a promising alternative where parts are identified through multi-view rendering and prompting.
+            Supervised 3D part segmentation models are tailored for a fixed set of objects and parts, limiting their transferability to open-set, real-world scenarios. Recent works have explored vision-language models (VLMs) as a promising alternative, using multi-view rendering and textual prompting to identify object parts.
+          </p>
+          
+          <p>
+            However, naively applying VLMs in this context introduces several drawbacks, such as the need for meticulous prompt engineering, and fails to leverage the 3D geometric structure of objects. To address these limitations, we propose COPS, a COmprehensive model for Parts Segmentation that blends the semantics extracted from visual concepts and 3D geometry to effectively identify object parts.
+            COPS renders a point cloud from multiple viewpoints, extracts 2D features, projects them back to 3D, and uses a novel geometric-aware feature aggregation procedure to ensure spatial and semantic consistency. Finally, it clusters points into parts and labels them.
           </p>
           <p>
-            However, naively applying VLMs in this setting brings many of their disadvantages (<i>e.g.</i> meticulously crafting prompts) and fails to leverage the 3D geometric structure of the object.
-            To address these limitations, we propose COPS, a <b>co</b>mprehensive model for <b>p</b>arts <b>s</b>egmentation that blends the semantics extracted from visual concepts and 3D geometry to identify the parts effectively.
-            It renders a point cloud from multiple viewpoints, extracts 2D features, projects them back to 3D, and introduces geometric information to ensure spatial and semantic consistency with a new geometric module. Lastly, it clusters points into parts and labels them.
-          </p>
-          <p>
-            We demonstrate that COPS is an efficient, scalable, and simple yet effective method for achieving zero-shot SOTA performance on five datasets, encompassing both synthetic and real-world data, texture-less and coloured objects, and both rigid and non-rigid shapes.
-            The code is openly available.
+            We demonstrate that COPS is efficient, scalable, and achieves zero-shot state-of-the-art performance across five datasets, covering synthetic and real-world data, texture-less and coloured objects, as well as rigid and non-rigid shapes.
           </p>
         </div>
       </div>
